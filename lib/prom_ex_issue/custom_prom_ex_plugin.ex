@@ -44,7 +44,7 @@ defmodule PromExIssue.CustomPromExPlugin do
     # end
 
     # Error case 2
-    if invocation_counter > 5 and invocation_counter < 10 do
+    if invocation_counter >= 5 and invocation_counter < 10 do
       raise "Something is not working correctly, I can't return the metrics right now!"
     end
 

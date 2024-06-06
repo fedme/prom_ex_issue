@@ -3,8 +3,8 @@ defmodule PromExIssue.PromEx do
 
   @impl true
   def plugins do
-    {:ok, agent} = Agent.start_link(fn -> 0 end)
+    {:ok, agent} = Agent.start_link(fn -> 1 end)
 
-    [{PromExIssue.CustomPromExPlugin, poll_rate: 5_000, debug_agent: agent}]
+    [{PromExIssue.CustomPromExPlugin, poll_rate: 2_000, debug_agent: agent}]
   end
 end
